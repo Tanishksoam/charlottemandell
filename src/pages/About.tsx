@@ -3,7 +3,7 @@ import bibliographybg from "../assets/sections/trees.jpg"
 import authorimg from '../assets/author-img.png'
 import TitleSection from "@/components/typography/TitleSection"
 import Collection from "@/components/Collection"
-const About = ({ publishedbooks}) => {
+const About = ({ publishedbooks }) => {
   return (
     <div>
     <Title title="Biblography"  background={bibliographybg} />

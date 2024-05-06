@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Navbar } from "./components/Navbar";
 import Header from "./components/Header";
 import { ContactForm } from "./components/ContactForm";
 
 import booksdata from "./lib/books.json";
 import About from "./pages/About";
+import Essays from "./pages/Essays";
+import Home from "./pages/Home";
 
 interface Book {
   thumbnail: string;
@@ -48,11 +51,18 @@ const Template = () => {
 
   return (
     <div className="max-w-7xl mx-auto bg-white">
-      <Header />
-      <Navbar />
-      <About publishedbooks={books} />
-      {/* <Collection /> */}
-      {/* <ContactForm /> */}
+          <Router>
+      <div className="max-w-7xl mx-auto bg-white">
+        <Header />
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About publishedbooks={books} />} />
+          <Route path="/essays" element={<Essays />} />
+          <Route path="/contact" element={<ContactForm />} />
+        </Routes>
+      </div>
+    </Router>
     </div>
   );
 };

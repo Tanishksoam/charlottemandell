@@ -1,4 +1,11 @@
 import { Cards } from "./ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 interface Book {
   thumbnail: string;
@@ -13,12 +20,17 @@ interface CollectionProps {
 const Collection: React.FC<CollectionProps> = ({ books }) => {
   return (
     <>
-      <div>Cards</div>
-      <section className="flex flex-wrap gap-5">
-        {books.map((book: Book, index: number) => (
-          <Cards key={index} book={book} />
-        ))}
-      </section>
+      <Carousel className="w-full">
+        <CarouselContent>
+          {books.map((book: Book, index: number) => (
+            <CarouselItem className="md:basis-1/3 lg:basis-1/5">
+              <Cards key={index} book={book} />
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
     </>
   );
 };
