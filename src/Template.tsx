@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route  } from "react-router-dom";
 import { Navbar } from "./components/Navbar";
 import Header from "./components/Header";
-
+import backgroundImg from './assets/topography.svg'
 
 import About from "./pages/About";
 import Essays from "./pages/Essays";
@@ -11,12 +11,18 @@ import EssayDetailed from "./components/EssayDetailed";
 
 
 
+
+
 const Template = () => {
 
+  const backgroundStyle = {
+    backgroundImage: `url(${backgroundImg})`
+  };
+
   return (
-    <div className="max-w-7xl mx-auto bg-white">
+    <div className="mx-auto" style={backgroundStyle}>
           <Router>
-      <div className="max-w-7xl mx-auto bg-white">
+      <div className="min-h-screen mx-auto max-w-7xl  font-[pt-sherif]">
         <Header />
         <Navbar />
         <Routes>

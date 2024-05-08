@@ -5,7 +5,7 @@ import { SheetTrigger, SheetContent, Sheet } from "@/components/ui/sheet";
 
 export function Navbar() {
   return (
-    <header className="sticky top-0 bg-white flex h-20 w-full shrink-0 items-center px-4 md:px-6 border-y">
+    <header className="sticky top-0 bg-white flex h-20 w-full shrink-0 items-center px-4 md:px-6 border">
       <Sheet>
         <SheetTrigger asChild>
           <Button className="lg:hidden" size="icon" variant="outline">

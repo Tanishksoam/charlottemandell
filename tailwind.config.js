@@ -18,6 +18,9 @@ module.exports = {
     },
     extend: {
       keyframes: {
+        fontFamily: {
+          'pt-sherif': ['"PT Serif"', 'serif'],
+        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },

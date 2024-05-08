@@ -1,6 +1,11 @@
+import { Title } from "@/components/typography/Title"
+import banner from '../assets/sections/welcome.avif'
+
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+      <Title title="" background={banner} />
+    </div>
   )
 }
 

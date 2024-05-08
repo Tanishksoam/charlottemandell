@@ -1,6 +1,7 @@
 import React from "react";
 import Markdown from "react-markdown";
 import { Link } from "react-router-dom";
+import TitleSection from "./typography/TitleSection";
 
 interface Essay {
   id: number;
@@ -31,15 +32,15 @@ const EssayPreview: React.FC<EssayPreviewProps> = ({ essay }) => {
 
   console.log(essay);
   return (
-    <div className="p-5 bg-green-50 shadow border-l-8 border-rose-600">
+    <div className="p-5 bg-white shadow border-gray-600">
       <Link to={`/essay/${essay.title.replace(/\s+/g, '-').toLowerCase()}`}>
-        <div className="text-2xl py-3 font-semibold text-rose-600 hover:underline">
-          {formatTitle(essay.title)}
-        </div>
+        <TitleSection title={`${formatTitle(essay.title)}`} color="green"/>
       </Link>
+      <div className="py-2 opacity-75">
       <Markdown>
         {truncateEssay(essay.paragraphs)}
       </Markdown>
+      </div>
     </div>
   );
 };

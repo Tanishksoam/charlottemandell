@@ -1,6 +1,6 @@
 
 import { Title } from "@/components/typography/Title"
-import bibliographybg from "../assets/sections/trees.jpg"
+import banner from "../assets/sections/bird.avif"
 import authorimg from '../assets/author-img.png'
 import TitleSection from "@/components/typography/TitleSection"
 import Collection from "@/components/Collection"
@@ -8,20 +8,13 @@ import Collection from "@/components/Collection"
 const About = () => {
   return (
     <div>
-    <Title title="Biblography"  background={bibliographybg} />
-
+    <Title title="Biblography"  background={banner} />
     {/* author's about */}
-    <div className="flex flex-col sm:flex-row items-center gap-6 p-6 md:p-8">
+    <div className="grid md:grid-cols-2 items-center gap-6 p-6 md:p-8">
       <img
         alt="Charlotte Mandell"
-        className="rounded-full object-cover"
-        height={350}
+        className="object-cover"
         src={authorimg}
-        style={{
-          aspectRatio: "500/500",
-          objectFit: "cover",
-        }}
-        width={250}
       />
       <div className="flex flex-col gap-3">
         <h2 className="text-3xl font-bold">Charlotte Mandell</h2>
@@ -41,7 +34,7 @@ const About = () => {
     </div>
 
     {/* published books */}
-    <TitleSection title="Published Books" color="red" />
+    <TitleSection title="Published Books" color="green" />
     <Collection />
     </div>
   )

@@ -7,7 +7,7 @@ interface TitleSectionProps {
 
 const TitleSection: React.FC<TitleSectionProps> = ({ title, color }) => {
   return (
-    <div className={`text-2xl py-8 bg-${color}-500 font-extrabold text-center text-white`}>
+    <div className={`text-2xl py-4 bg-${color}-50 font-semibold border-b border-neutral-300 text-black hover:italic`}>
       {title}
     </div>
   );

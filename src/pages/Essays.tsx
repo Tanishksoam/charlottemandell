@@ -1,5 +1,5 @@
 import { Title } from '@/components/typography/Title';
-import bibliographybg from '../assets/sections/trees.jpg'
+import banner from '../assets/sections/reading.avif'
 import essays from '../lib/essays.json';
 import EssayPreview from '@/components/EssayPreview';
 
@@ -15,8 +15,8 @@ interface Essay {
 const Essays = () => {
   return (
     <div>
-      <Title title="Essays"  background={bibliographybg} />
-      <div className='grid grid-cols-2 gap-4 p-4'>
+      <Title title="Essays"  background={banner} />
+      <div className='grid md:grid-cols-2 gap-4 p-4'>
         {essays.map((essay: Essay) => (
           <EssayPreview key={essay.id} essay={essay} />
         ))}

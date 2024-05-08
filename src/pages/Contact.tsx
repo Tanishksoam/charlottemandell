@@ -1,5 +1,5 @@
 import { ContactForm } from '@/components/ContactForm'
-import banner from '../assets/sections/trees.jpg'
+import banner from '../assets/sections/typing.avif'
 import { Title } from '@/components/typography/Title'
 
 const Contact = () => {
