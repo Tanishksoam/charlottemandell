@@ -1,9 +1,11 @@
+
 import { Title } from "@/components/typography/Title"
 import bibliographybg from "../assets/sections/trees.jpg"
 import authorimg from '../assets/author-img.png'
 import TitleSection from "@/components/typography/TitleSection"
-import Collection from "@/components/Collection"
-const About = ({ publishedbooks }) => {
+// import Collection from "@/components/Collection"
+
+const About = () => {
   return (
     <div>
     <Title title="Biblography"  background={bibliographybg} />
@@ -40,7 +42,7 @@ const About = ({ publishedbooks }) => {
 
     {/* published books */}
     <TitleSection title="Published Books" color="red" />
-    <Collection books={publishedbooks}/>
+    {/* <Collection /> */}
     </div>
   )
 }
