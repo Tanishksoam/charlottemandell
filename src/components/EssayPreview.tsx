@@ -31,10 +31,9 @@ const EssayPreview: React.FC<EssayPreviewProps> = ({ essay }) => {
 
   console.log(essay);
   return (
-    <div className="border p-5">
-      <img src={essay.banner || ""} alt={`Banner for ${essay.title}`} className="h-20 w-full object-cover" />
+    <div className="p-5 bg-green-50 shadow border-l-8 border-rose-600">
       <Link to={`/essay/${essay.title.replace(/\s+/g, '-').toLowerCase()}`}>
-        <div className="text-2xl py-5 font-semibold text-rose-800 hover:underline">
+        <div className="text-2xl py-3 font-semibold text-rose-600 hover:underline">
           {formatTitle(essay.title)}
         </div>
       </Link>

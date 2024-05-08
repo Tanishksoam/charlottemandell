@@ -1,162 +1,30 @@
 [
-    {
-      "title": "Deserter"
-    },
-    {
-      "title": "An Inconvenient Place"
-    },
-    {
-      "title": "War"
-    },
-    {
-      "title": "Speaking Skin"
-    },
-    {
-      "title": "In the Shadow of Girls in Blossom"
-    },
-    {
-      "title": "Monsieur Teste"
-    },
-    {
-      "title": "The Mysterious Correspondent: New Stories"
-    },
-    {
-      "title": "Doing"
-    },
-    {
-      "title": "The Magnetic Fields"
-    },
-    {
-      "title": "The Criminal Child and Other Essays"
-    },
-    {
-      "title": "An Apartment on Uranus"
-    },
-    {
-      "title": "Tell Them of Battles, Kings and Elephants"
-    },
-    {
-      "title": "Compass"
-    },
-    {
-      "title": "The Year of the Drought"
-    },
-    {
-      "title": "Coming"
-    },
-    {
-      "title": "Jean Cocteau"
-    },
-    {
-      "title": "Altruism"
-    },
-    {
-      "title": "Syrian Notebooks: Inside the Homs Uprising"
-    },
-    {
-      "title": "After Fukushima: The Equivalence of Catastrophes"
-    },
-    {
-      "title": "Street of Thieves"
-    },
-    {
-      "title": "The Fata Morgana Books"
-    },
-    {
-      "title": "Facing the Torturer"
-    },
-    {
-      "title": "The Invisible Enemy"
-    },
-    {
-      "title": "My Spiritual Journey"
-    },
-    {
-      "title": "Zone"
-    },
-    {
-      "title": "The Castle in Transylvania"
-    },
-    {
-      "title": "Tombeau of Ibn Arabi and White Traverses"
-    },
-    {
-      "title": "The Fall of Sleep"
-    },
-    {
-      "title": "The Kindly Ones"
-    },
-    {
-      "title": "Sherlock Holmes Was Wrong: Reopening the Case of the Hound of the Baskervilles"
-    },
-    {
-      "title": "On Poetry and Politics"
-    },
-    {
-      "title": "The Lemoine Affair"
-    },
-    {
-      "title": "Listen: A History of Our Ears"
-    },
-    {
-      "title": "Geography of Hope"
-    },
-    {
-      "title": "The Girl with the Golden Eyes"
-    },
-    {
-      "title": "Listening"
-    },
-    {
-      "title": "A Voice from Elsewhere"
-    },
-    {
-      "title": "The Little Girl and the Cigarette"
-    },
-    {
-      "title": "American Vertigo: Traveling America in the Footsteps of Tocqueville"
-    },
-    {
-      "title": "Nothing Serious"
-    },
-    {
-      "title": "The Horla"
-    },
-    {
-      "title": "A Jewish Doctor in Auschwitz"
-    },
-    {
-      "title": "The Jewish Prison"
-    },
-    {
-      "title": "A Simple Heart"
-    },
-    {
-      "title": "The Flesh of Words"
-    },
-    {
-      "title": "War, Evil, and the End of History"
-    },
-    {
-      "title": "The Malady of Islam"
-    },
-    {
-      "title": "Fragments of the Artwork"
-    },
-    {
-      "title": "The Book to Come"
-    },
-    {
-      "title": "Faux Pas"
-    },
-    {
-      "title": "Glory and Terror: Seven Deaths under the French Revolution"
-    },
-    {
-      "title": "The Body Politic: Corporeal Metaphor in Revolutionary France, 1770-1800"
-    },
-    {
-      "title": "The Work of Fire"
-    }
-  ]
-  
+  {
+    "title": "In the Shadow of Young Girls in Bloom",
+    "isbn": 9780141941851,
+    "author": "Marcel Proust",
+    "publication": "",
+    "status": "forthcoming"
+  },
+  {
+    "title": "Monsieur Teste",
+    "isbn": 6051850112,
+    "author": "Paul Valery",
+    "publication": "NYRB Classics",
+    "status": "forthcoming"
+  },
+  {
+    "title": "The Mysterious Correspondent: New Stories",
+    "isbn": 9780861540150,
+    "author": "Marcel Proust",
+    "publication": "Oneworld Publications / Simon & Schuster",
+    "status": "Spring 2021"
+  },
+  {
+    "title": "Doing",
+    "isbn": 9780857427847,
+    "author": "Jean-Luc Nancy",
+    "publication": "Seagull Books",
+    "status": "Fall 2020"
+  }
+]

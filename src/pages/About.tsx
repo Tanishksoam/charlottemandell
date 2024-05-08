@@ -3,7 +3,7 @@ import { Title } from "@/components/typography/Title"
 import bibliographybg from "../assets/sections/trees.jpg"
 import authorimg from '../assets/author-img.png'
 import TitleSection from "@/components/typography/TitleSection"
-// import Collection from "@/components/Collection"
+import Collection from "@/components/Collection"
 
 const About = () => {
   return (
@@ -42,7 +42,7 @@ const About = () => {
 
     {/* published books */}
     <TitleSection title="Published Books" color="red" />
-    {/* <Collection /> */}
+    <Collection />
     </div>
   )
 }
