@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 
 export function ContactForm() {
   return (
-    <div className="mx-auto max-w-2xl p-4 space-y-6">
+    <div className="mx-auto p-4 space-y-6">
       <form className="space-y-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="space-y-2">

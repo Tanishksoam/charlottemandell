@@ -20,9 +20,9 @@ const Template = () => {
   };
 
   return (
-    <div className="mx-auto" style={backgroundStyle}>
+    <div style={backgroundStyle}>
           <Router>
-      <div className="min-h-screen mx-auto max-w-7xl  font-[pt-sherif]">
+      <div className="min-h-screen font-[pt-sherif]">
         <Header />
         <Navbar />
         <Routes>

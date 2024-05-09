@@ -9,6 +9,9 @@ const About = () => {
   return (
     <div>
     <Title title="Biblography"  background={banner} />
+
+    {/* content */}
+    <div className="max-w-6xl mx-auto">
     {/* author's about */}
     <div className="grid md:grid-cols-2 items-center gap-6 p-6 md:p-8">
       <img
@@ -36,6 +39,7 @@ const About = () => {
     {/* published books */}
     <TitleSection title="Published Books" color="green" />
     <Collection />
+    </div>
     </div>
   )
 }
