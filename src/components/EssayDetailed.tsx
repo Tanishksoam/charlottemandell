@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import essays from "../lib/essays.json";
 import Markdown from "react-markdown";
+import TitleSection from "./typography/TitleSection";
 
 const EssayDetailed = () => {
   const { essay_id } = useParams();
@@ -16,15 +17,20 @@ const EssayDetailed = () => {
     return <div>Essay not found.</div>;
   }
 
+  const title =  formatTitle(essay.title);
   return (
     <div>
-      <h1>{formatTitle(essay.title)}</h1>
+      <div className="flex items-center gap-6">
+        <Link to="/essays"><span className="">Go Back</span></Link>
+      <TitleSection title={title} color="green" />
+      </div>
+      <div className="py-4">
       {essay.paragraphs.map((paragraph, index) => (
         <Markdown key={index}>
             {paragraph}
         </Markdown>
       ))}
-      <Link to="/essays">Back to essays</Link>
+      </div>
     </div>
   );
 };
