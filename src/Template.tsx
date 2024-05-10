@@ -1,9 +1,8 @@
 import { BrowserRouter as Router, Routes, Route  } from "react-router-dom";
 import { Navbar } from "./components/Navbar";
-import Header from "./components/Header";
 import backgroundImg from './assets/topography.svg'
 
-import About from "./pages/About";
+import Work from "./pages/Work";
 import Essays from "./pages/Essays";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
@@ -23,11 +22,11 @@ const Template = () => {
     <div style={backgroundStyle}>
           <Router>
       <div className="min-h-screen font-[pt-sherif]">
-        <Header />
+        {/* <Header /> */}
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/work" element={<Work />} />
           <Route path="/essays" element={<Essays />} />
           <Route path="/essay/:essay_id" element={<EssayDetailed />} />
           <Route path="/contact" element={<Contact />} />
