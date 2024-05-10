@@ -1,4 +1,3 @@
-import Header from "@/components/Header";
 import authorimg from "../assets/author-img.png";
 
 import xIcon from '../assets/icons/x.svg';
