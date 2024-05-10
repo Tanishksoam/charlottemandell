@@ -1,7 +1,7 @@
 import authorimg from "../assets/author-img.png";
 
-import xIcon from '../assets/icons/x.svg';
-import linkedinIcon from '../assets/icons/linkedin.svg';
+import xIcon from "../assets/icons/x.svg";
+import linkedinIcon from "../assets/icons/linkedin.svg";
 
 const Home = () => {
   return (
@@ -23,11 +23,14 @@ const Home = () => {
 
       {/* social icons */}
       <div className="flex gap-6 my-6 justify-center">
-        <a href="" target="_blank">
-      <img src={xIcon} alt="X Icon" className="h-8 lg:h-10 opacity-75"/>
+        <a href="https://twitter.com/avecsesdoigts" target="_blank">
+          <img src={xIcon} alt="X Icon" className="h-8 lg:h-10 opacity-75" />
         </a>
-        <a href="" target="_blank">
-      <img src={linkedinIcon} alt="" className="h-8 lg:h-10 opacity-75"/>
+        <a
+          href="https://www.linkedin.com/in/charlotte-mandell-5b991223/"
+          target="_blank"
+        >
+          <img src={linkedinIcon} alt="" className="h-8 lg:h-10 opacity-75" />
         </a>
       </div>
     </div>

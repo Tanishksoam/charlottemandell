@@ -2,6 +2,7 @@ import { Title } from "@/components/typography/Title";
 import banner from "../assets/sections/bird.avif";
 import TitleSection from "@/components/typography/TitleSection";
 import Collection from "@/components/Collection";
+import Translations from "@/components/Translations";
 
 const criticalWritings = {
   writings: [
@@ -105,7 +106,6 @@ const awardsAndHonors = {
   ],
 };
 
-
 const Work = () => {
   return (
     <div>
@@ -116,15 +116,18 @@ const Work = () => {
       />
 
       {/* content */}
-      <div className="max-w-6xl mx-auto">
-
+      <div className="max-w-6xl mx-auto bg-white py-8">
         {/* published books */}
         <TitleSection title="Published Books" color="green" />
         <Collection />
 
+        {/* published books */}
+        <TitleSection title="Translations appearing in periodicals and collections" color="green" />
+        <Translations />
+
         {/* Critical Writing */}
         <TitleSection title="Critical Writing" color="green" />
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-8 md:grid-cols-2 pt-6 px-6">
           {criticalWritings.writings.map((writing, index) => (
             <div
               key={index}
@@ -162,13 +165,18 @@ const Work = () => {
 
         {/* awards & honors */}
         <TitleSection title="Awards & Honors" color="green" />
-        <div className="p-6 sm:p-10">
+        <div className="p-6 sm:p-10 max-w-2xl mx-auto">
           <div className="after:absolute after:inset-y-0 after:w-px after:bg-gray-500/20 relative pl-6 after:left-0 grid gap-10 dark:after:bg-gray-400/20">
             {awardsAndHonors.items.map((item, index) => (
-              <div className="grid gap-1 relative max-w-6xl bg-white p-6 shadow rounded-md" key={index}>
+              <div
+                className="grid gap-1 relative max-w-6xl bg-white p-6 shadow rounded-md"
+                key={index}
+              >
                 <div className="aspect-square w-3 bg-gray-900 rounded-full absolute left-0 translate-x-[-29.5px] z-10 top-1 dark:bg-gray-50" />
                 <div className="font-medium">{item.year}</div>
-                <div className="text-xl font-semibold opacity-75">{item.awardName}</div>
+                <div className="text-xl font-semibold opacity-75">
+                  {item.awardName}
+                </div>
                 <div>{item.awardedBy}</div>
                 {item.extra && (
                   <div className="text-gray-500 dark:text-gray-400">

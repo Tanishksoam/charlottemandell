@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import essays from "../lib/essays.json";
+import { essays } from "../lib/essays";
 import TitleSection from "./typography/TitleSection";
 
 const EssayDetailed = () => {
@@ -18,19 +18,12 @@ const EssayDetailed = () => {
 
   const title = formatTitle(essay.title);
   return (
-    <div>
+    <div className="bg-white max-w-6xl mx-auto">
       <div className="flex items-center gap-6">
-        <Link to="/essays">
-          <span className="">Go Back</span>
-        </Link>
         <TitleSection title={title} color="green" />
       </div>
-      <div className="py-4 max-w-6xl mx-auto">
-        {essay.paragraphs.map((paragraph, index) => (
-          <div key={index} className="flex flex-col gap-5 text-2xl">
-            {paragraph}
-          </div>
-        ))}
+      <div className="flex flex-col justify-center items-center py-4 max-w-6xl text-justify">
+        {essay.content}
       </div>
     </div>
   );

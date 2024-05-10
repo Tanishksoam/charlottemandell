@@ -1,12 +1,12 @@
 import React from "react";
-import Markdown from "react-markdown";
 import { Link } from "react-router-dom";
 import TitleSection from "./typography/TitleSection";
 
 interface Essay {
   id: number;
   title: string;
-  paragraphs: string[];
+  content:  JSX.Element;
+  description: string;
   references?: string;
   banner?: string;
 }
@@ -21,14 +21,6 @@ const EssayPreview: React.FC<EssayPreviewProps> = ({ essay }) => {
                 .replace(/\b\w/g, char => char.toUpperCase());
   };
 
-  const truncateEssay = (text: string[]): string => {
-    const fullText = text.join(" ");
-    const words = fullText.split(" ");
-    if (words.length > 20) {
-      return words.slice(0, 20).join(" ") + "...";
-    }
-    return fullText;
-  };
 
   console.log(essay);
   return (
@@ -37,9 +29,7 @@ const EssayPreview: React.FC<EssayPreviewProps> = ({ essay }) => {
         <TitleSection title={`${formatTitle(essay.title)}`} color="green"/>
       </Link>
       <div className="py-2 opacity-75">
-      <Markdown>
-        {truncateEssay(essay.paragraphs)}
-      </Markdown>
+        {essay.description}
       </div>
     </div>
   );

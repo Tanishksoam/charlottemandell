@@ -1,12 +1,13 @@
 import { Title } from "@/components/typography/Title";
 import banner from "../assets/sections/reading.avif";
-import essays from "../lib/essays.json";
+import { essays } from "../lib/essays";
 import EssayPreview from "@/components/EssayPreview";
 
 interface Essay {
   id: number;
   title: string;
-  paragraphs: string[];
+  content:  JSX.Element;
+  description: string;
   references?: string;
   banner?: string;
 }
