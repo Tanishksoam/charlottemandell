@@ -6,7 +6,6 @@ import linkedinIcon from '../assets/icons/linkedin.svg';
 const Home = () => {
   return (
     <div className="mx-auto max-w-xl md:px-4">
-      {/* <Header /> */}
       <img src={authorimg} alt="" className="mx-auto mt-12" />
       <div className="flex flex-col gap-3">
         <h2 className="text-3xl font-bold text-center mt-8 italic">

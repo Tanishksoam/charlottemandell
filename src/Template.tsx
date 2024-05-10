@@ -22,7 +22,6 @@ const Template = () => {
     <div style={backgroundStyle}>
           <Router>
       <div className="min-h-screen font-[pt-sherif]">
-        {/* <Header /> */}
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
