@@ -6,7 +6,6 @@ import {
   DrawerContent,
   DrawerDescription,
   DrawerHeader,
-  DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
 
@@ -38,7 +37,11 @@ export function Cards({ book }: CardsProps) {
             />
       <Drawer>
         <DrawerTrigger asChild>
-          <div className="py-4 text-center text-xl text-blue-600 hover:underline cursor-pointer">{book.title}</div>
+          <div className=" mt-4 text-center text-xl text-blue-600 hover:underline cursor-pointer min-h-16" title={book.title}>
+          {book.title.length > 25
+                        ? `${book.title.substring(0, 22)}...`
+                        : book.title}
+            </div>
         </DrawerTrigger>
         <DrawerContent>
           <div className="mx-auto w-full max-w-2xl py-6">

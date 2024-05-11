@@ -22,7 +22,7 @@ const EssayDetailed = () => {
       <div className="flex items-center gap-6">
         <TitleSection title={title} />
       </div>
-      <div className="flex flex-col justify-center items-center py-4 max-w-6xl text-justify">
+      <div className="flex flex-col justify-center items-center p-4 max-w-6xl text-justify">
         {essay.content}
       </div>
     </div>
