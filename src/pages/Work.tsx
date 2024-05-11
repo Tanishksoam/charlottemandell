@@ -118,15 +118,15 @@ const Work = () => {
       {/* content */}
       <div className="max-w-6xl mx-auto bg-white py-8">
         {/* published books */}
-        <TitleSection title="Published Books" color="green" />
+        <TitleSection title="Published Books" />
         <Collection />
 
         {/* published books */}
-        <TitleSection title="Translations appearing in periodicals and collections" color="green" />
+        <TitleSection title="Translations appearing in periodicals and collections" />
         <Translations />
 
         {/* Critical Writing */}
-        <TitleSection title="Critical Writing" color="green" />
+        <TitleSection title="Critical Writing" />
         <div className="grid gap-8 md:grid-cols-2 pt-6 px-6">
           {criticalWritings.writings.map((writing, index) => (
             <div
@@ -164,7 +164,7 @@ const Work = () => {
         </div>
 
         {/* awards & honors */}
-        <TitleSection title="Awards & Honors" color="green" />
+        <TitleSection title="Awards & Honors" />
         <div className="p-6 sm:p-10 max-w-2xl mx-auto">
           <div className="after:absolute after:inset-y-0 after:w-px after:bg-gray-500/20 relative pl-6 after:left-0 grid gap-10 dark:after:bg-gray-400/20">
             {awardsAndHonors.items.map((item, index) => (

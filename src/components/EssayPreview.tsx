@@ -26,7 +26,7 @@ const EssayPreview: React.FC<EssayPreviewProps> = ({ essay }) => {
   return (
     <div className="p-5 bg-white shadow border-gray-600">
       <Link to={`/essay/${essay.title.replace(/\s+/g, '-').toLowerCase()}`}>
-        <TitleSection title={`${formatTitle(essay.title)}`} color="green"/>
+        <TitleSection title={`${formatTitle(essay.title)}`} />
       </Link>
       <div className="py-2 opacity-75">
         {essay.description}
