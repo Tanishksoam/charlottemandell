@@ -30,8 +30,10 @@ const Collection = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
+        <div className="flex justify-center gap-4 w-full"> 
         <CarouselPrevious />
         <CarouselNext />
+        </div>
       </Carousel>
     </>
   );

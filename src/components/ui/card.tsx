@@ -42,30 +42,29 @@ export function Cards({ book }: CardsProps) {
         </DrawerTrigger>
         <DrawerContent>
           <div className="mx-auto w-full max-w-2xl py-6">
-            <div className="flex flex-col md:flex-row">
+            <div className="flex flex-col md:flex-row gap-6">
             <img
               alt={`Book Cover of ${book.title}`}
               className="mx-auto aspect-[3/4] w-full max-w-[300px] overflow-hidden rounded-lg object-cover shadow-lg"
               src="/placeholder.svg"
             />
               <DrawerHeader>
-                <DrawerTitle>{book.title}</DrawerTitle>
                 <DrawerDescription>
+                    <Badge variant="secondary">{book.status}</Badge>
                   <div>
-                    <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+                    <h1 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
                       {book?.title}
                     </h1>
-                    <p className="text-gray-500 dark:text-gray-400">
+                    <p className="mt-2 text-gray-500 dark:text-gray-400">
                       <strong>Written by: </strong>
                       {book?.author}
                     </p>
-                    <p className="text-gray-500 dark:text-gray-400">
+                    <p className="mt-2 text-gray-500 dark:text-gray-400">
                       <strong>Published by: </strong>
                       {book?.publisher}
                     </p>
-                    <Badge variant="secondary">{book.status}</Badge>
                   </div>
-                  <a href={`${book?.link}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-medium text-neutral-900 hover:underline dark:text-neutral-50">
+                  <a href={`${book?.link}`} target="_blank" rel="noopener noreferrer" className="inline-flex my-6 items-center gap-2 text-sm font-medium text-neutral-900 hover:underline dark:text-neutral-50">
                 <Button variant="outline">View on Amazon</Button>
               </a>
                 </DrawerDescription>

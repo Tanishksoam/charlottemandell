@@ -10,7 +10,7 @@ export function Title({ title, description, background }: TitleProps) {
       <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl">
         {title}
       </h1>
-      <h3 className="md:text-2xl mt-4 max-w-2xl mx-auto opacity-75">{description}</h3>
+      <h3 className="md:text-2xl mt-4 max-w-2xl mx-auto opacity-75 px-4 md:px-0">{description}</h3>
     </div>
   );
 }

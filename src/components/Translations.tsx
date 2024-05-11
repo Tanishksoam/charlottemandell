@@ -47,8 +47,10 @@ const Translations = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
+        <div className="flex justify-center gap-4 w-full mt-6"> 
         <CarouselPrevious />
         <CarouselNext />
+        </div>
       </Carousel>
     </section>
   );
