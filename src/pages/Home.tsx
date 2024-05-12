@@ -12,12 +12,13 @@ const Home = () => {
           Charlotte Mandell
         </h2>
         <div className="text-md text-center text-gray-700 space-y-2">
-          I am a French literary translator born in Hartford, Connecticut in
-          1968. I attended Boston Latin High School, the Université de Paris
-          III, and Bard College, where I majored in French literature and film
-          theory. In April 2021, I was honored with the title of Chevalier dans
-          l'Ordre des Arts et des Lettres by the French government. I live in
-          the Hudson Valley with my husband, the poet Robert Kelly.
+          Charlotte Mandell is a French literary translator who was born in
+          Hartford, Connecticut in 1968. She went to Boston Latin High School,
+          the Université de Paris III, and Bard College, where she majored in
+          French literature and film theory. In April 2021 she received the
+          honor of Chevalier dans l'Ordre des Arts et des Lettres from the
+          French government. She lives in the Hudson Valley with her husband,
+          the poet Robert Kelly.
         </div>
       </div>
 
