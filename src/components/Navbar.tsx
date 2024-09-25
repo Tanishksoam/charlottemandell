@@ -1,5 +1,5 @@
-import React, { SVGProps } from 'react';
-import { Link } from 'react-router-dom';
+import React, { SVGProps } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { SheetTrigger, SheetContent, Sheet } from "@/components/ui/sheet";
 
@@ -15,16 +15,28 @@ export function Navbar() {
         </SheetTrigger>
         <SheetContent side="left">
           <div className="grid gap-2 py-6">
-            <Link className="flex w-full items-center py-2 text-lg font-semibold" to="/">
+            <Link
+              className="flex w-full items-center py-2 text-lg font-semibold"
+              to="/"
+            >
               Home
             </Link>
-            <Link className="flex w-full items-center py-2 text-lg font-semibold" to="/work">
+            <Link
+              className="flex w-full items-center py-2 text-lg font-semibold"
+              to="/work"
+            >
               My Work
             </Link>
-            <Link className="flex w-full items-center py-2 text-lg font-semibold" to="/essays">
+            <Link
+              className="flex w-full items-center py-2 text-lg font-semibold"
+              to="/essays"
+            >
               Essays
             </Link>
-            <Link className="flex w-full items-center py-2 text-lg font-semibold" to="/contact">
+            <Link
+              className="flex w-full items-center py-2 text-lg font-semibold"
+              to="/contact"
+            >
               Contact
             </Link>
           </div>
@@ -57,7 +69,7 @@ export function Navbar() {
         </Link>
       </nav>
     </header>
-  )
+  );
 }
 
 const MenuIcon: React.FC<SVGProps<SVGSVGElement>> = (props) => {
@@ -79,4 +91,4 @@ const MenuIcon: React.FC<SVGProps<SVGSVGElement>> = (props) => {
       <line x1="4" x2="20" y1="18" y2="18" />
     </svg>
   );
-}
+};
