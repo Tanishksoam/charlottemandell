@@ -15,19 +15,17 @@ const SideNav: React.FC = () => {
 
   // Define all the navigation links here for reusability
   const navLinks: NavLink[] = [
-    { href: "#", label: "MY BOOK" },
-    { href: "#", label: "BIO" },
-    { href: "#", label: "BOOKS" },
-    { href: "#", label: "JOURNALISM" },
-    { href: "#", label: "SPEAKING ENGAGEMENTS" },
-    { href: "#", label: "CONTACT" },
+    { href: "/", label: "HOME" },
+    { href: "/work", label: "MY WORK " },
+    { href: "/essays", label: "ESSAYS" },
+    { href: "/contact", label: "CONTACT" },
   ];
 
   return (
     <div className="absolute top-0 left-0 z-10 border-r-2 border-[#a5a5a555]">
       {/* Collapsed Menu (Hamburger Icon) */}
       {!isOpen && (
-        <div className="w-fit p-4 h-[100vh] bg-white">
+        <div className="w-fit md:p-4  md:h-[100vh] bg-transparent md:bg-white">
           <button
             onClick={toggleNav}
             className="p-4 focus:outline-none"
@@ -49,7 +47,7 @@ const SideNav: React.FC = () => {
           animate={{ x: 0 }}
           exit={{ x: "-100%" }}
           transition={{ duration: 1.0, ease: "easeInOut" }}
-          className="fixed top-0 left-0 w-full md:w-[600px] h-full border-r-2 border-[#a5a5a555] bg-white z-50 p-8"
+          className="fixed top-0 left-0 w-screen md:w-[400px] h-full border-r-2 border-[#a5a5a555] bg-white z-50 p-8"
         >
           <button
             onClick={toggleNav}
@@ -59,6 +57,11 @@ const SideNav: React.FC = () => {
           >
             <span className="text-2xl">×</span>
           </button>
+          <div className="w-full flex justify-between items-center">
+            <div className="text-4xl font-medium text-gray-700">
+              Charlotte Mandell
+            </div>
+          </div>
           <div className="flex flex-col items-end justify-start h-full space-y-8 text-4xl text-gray-700 py-20">
             {/* Map over navLinks array to dynamically create the links */}
             {navLinks.map((link, index) => (
@@ -81,7 +84,7 @@ const SideNav: React.FC = () => {
           </div>
           <div className="absolute w-[90%] bottom-4 flex justify-between items-stretch left-4 text-sm text-gray-500">
             <p>Instagram</p>
-            <p>Alice Driver © All rights reserved.</p>
+            <p> © All rights reserved.</p>
           </div>
         </motion.div>
       )}
