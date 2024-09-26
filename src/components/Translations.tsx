@@ -6,50 +6,104 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { motion } from "framer-motion"; // Import Framer Motion
+import { FaBook } from "react-icons/fa6";
+import { BsCalendar2Date } from "react-icons/bs";
 
 const Translations = () => {
+  const itemVariants = {
+    hidden: { opacity: 0, x: 100 }, // Start off to the right
+    visible: { opacity: 1, x: 0 }, // Animate to the center
+  };
+
+  const hoverVariants = {
+    hover: {
+      scale: 1.05, // Slightly zoom on hover
+      transition: {
+        duration: 0.3,
+        type: "spring", // Springy hover effect
+      },
+    },
+  };
+
   return (
     <section className="container mx-auto py-12 px-4 md:px-6">
       <Carousel className="w-full">
         <CarouselContent>
           {publications.translations.map((translation, index: number) => (
-            <CarouselItem
-              className="md:basis-1/2 lg:basis-1/3 parent"
+            <motion.div
               key={translation.title || index}
+              initial="hidden"
+              animate="visible"
+              whileHover="hover"
+              variants={itemVariants} // Apply animation variants
+              transition={{
+                duration: 0.5,
+                ease: "easeInOut",
+              }}
             >
-              <div className="bg-white rounded-md container shadow">
-                <div className="p-6">
-                  <div className="space-y-2">
-                    <p className="text-sm text-gray-500 dark:text-gray-400">
-                      <strong>Author:</strong>
-                      {translation.author}
-                    </p>
-                    <h3 className="text-lg font-medium min-h-16" title={translation.title}>
+              <CarouselItem className=" basis-1 parent">
+                {" "}
+                {/* Make cards wider */}
+                <motion.div
+                  className="bg-white rounded-md w-80 px-8 py-4 shadow border-[1px] border-[#e5e7eb] dark:border-gray-800"
+                  variants={hoverVariants} // Apply hover animation
+                >
+                  <div className="space-y-2 w-full">
+                    <div className=" w-full flex justify-between items-center gap-4 text-xs">
+                      <p className=" text-gray-500 dark:text-gray-400">
+                        <strong>Author:</strong>
+                      </p>
+                      <p className=" text-gray-500 dark:text-gray-400">
+                        {translation.author}
+                      </p>
+                    </div>
+                    <h3
+                      className="text-xl font-medium "
+                      title={translation.title}
+                    >
                       {translation.title.length > 25
-                        ? `${translation.title.substring(0, 22)}...`
+                        ? `${translation.title}`
                         : translation.title}
                     </h3>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">
-                      <strong>Publisher:</strong>
-                      Acme Publishing
-                    </p>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">
-                      <strong>Publication Date:</strong>
-                      May 2023
-                    </p>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">
-                      <strong>Pages:</strong>
-                      250
-                    </p>
+                    <div className=" w-full flex justify-between items-center gap-4 text-xs">
+                      <p className=" flex gap-2 text-gray-500 dark:text-gray-400">
+                        <FaBook />
+                        <strong>Publisher:</strong>
+                      </p>
+                      <p className=" text-gray-500 dark:text-gray-400">
+                        Acme Publishing
+                      </p>
+                    </div>
+                    <div className=" w-full flex justify-between items-center gap-4 text-xs">
+                      <p className=" flex gap-2 text-gray-500 dark:text-gray-400">
+                        <BsCalendar2Date />
+                        <strong>Publication Date:</strong>
+                      </p>
+                      <p className=" text-gray-500 dark:text-gray-400">
+                        May 2023
+                      </p>
+                    </div>
+                    <div className=" w-full flex justify-end items-center gap-4 text-xs">
+                      <p className=" text-gray-500 dark:text-gray-400">
+                        <strong>250</strong> pages
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </CarouselItem>
+                </motion.div>
+              </CarouselItem>
+            </motion.div>
           ))}
         </CarouselContent>
-        <div className="flex justify-center gap-4 w-full mt-6"> 
-        <CarouselPrevious />
-        <CarouselNext />
+
+        {/* Arrows section with slight animation */}
+        <div className="flex justify-between items-center w-full">
+          <motion.div whileHover={{ scale: 1.2 }}>
+            <CarouselPrevious />
+          </motion.div>
+          <motion.div whileHover={{ scale: 1.2 }}>
+            <CarouselNext />
+          </motion.div>
         </div>
       </Carousel>
     </section>

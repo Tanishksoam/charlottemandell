@@ -115,17 +115,16 @@ const Work = () => {
         background={banner}
       />
 
-      {/* content */}
-      <div className="max-w-6xl mx-auto bg-white py-8">
-        {/* published books */}
+
+      <div className=" max-w-[1440px] mx-auto bg-white py-8">
+
         <TitleSection title="Published Books" />
         <Collection />
 
-        {/* published books */}
+
         <TitleSection title="Translations appearing in periodicals and collections" />
         <Translations />
 
-        {/* Critical Writing */}
         <TitleSection title="Critical Writing" />
         <div className="grid gap-8 md:grid-cols-2 pt-6 px-6">
           {criticalWritings.writings.map((writing, index) => (
