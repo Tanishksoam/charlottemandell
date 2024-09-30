@@ -25,11 +25,11 @@ const EssayPreview: React.FC<EssayPreviewProps> = ({ essay }) => {
   return (
     <div className="p-5 bg-white shadow boorder-b-4 border-gray-600">
       <Link to={`/essay/${essay.title.replace(/\s+/g, '-').toLowerCase()}`}>
-        <h2 className="scroll-m-20 mt-12 border-b p-4 text-blue-600 text-3xl font-semibold tracking-tight first:mt-0  w-full hover:underline">
-        {essay.id}. {formatTitle(essay.title)}
+        <h2 className="scroll-m-20 mt-12 border-b p-4 font-[Fredoka] text-black text-3xl font-semibold tracking-tight first:mt-0  w-full  hover:underline">
+         {formatTitle(essay.title)}
     </h2>
       </Link>
-      <div className="py-2 opacity-75">
+      <div className="py-2 px-4 font-[Fredoka] font-light opacity-75">
         {essay.description}
       </div>
     </div>

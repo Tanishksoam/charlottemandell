@@ -4,3 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.left-timeline {
+    flex-direction: row-reverse;
+  }
+  
+  .right-timeline {
+    flex-direction: row;
+  }
+  

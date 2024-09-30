@@ -28,7 +28,7 @@ export function Cards({ book }: CardsProps) {
   return (
     <>
       <div className="w-64 py-5 mx-auto flex items-center justify-center">
-        <div className="block" rel="noopener noreferrer">
+        <div className="block " rel="noopener noreferrer">
           <Drawer>
             <DrawerTrigger asChild>
               <img
@@ -46,11 +46,11 @@ export function Cards({ book }: CardsProps) {
               </div> */}
             </DrawerTrigger>
             <DrawerContent>
-              <div className="mx-auto w-full max-w-2xl py-6">
-                <div className="flex flex-col md:flex-row gap-6">
+              <div className="mx-auto w-full max-w-2xl py-4 md:py-6">
+                <div className="flex flex-col md:flex-row gap-4">
                   <img
                     alt={`Book Cover of ${book.title}`}
-                    className="mx-auto aspect-[3/4] w-full max-w-[300px] overflow-hidden rounded-lg object-cover shadow-lg"
+                    className="mx-auto aspect-[3/4] w-auto max-h-[350px] md:h-auto md:w-full md:max-w-[300px] overflow-hidden rounded-lg object-cover shadow-lg"
                     src="/placeholder.svg"
                   />
                   <DrawerHeader>

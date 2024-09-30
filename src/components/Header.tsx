@@ -1,5 +1,11 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { MdOutlineLibraryBooks } from "react-icons/md";
+import { PiBooks } from "react-icons/pi";
+import { LuContact } from "react-icons/lu";
+import { LuHome } from "react-icons/lu";
+import { IoLogoFacebook} from "react-icons/io5";
 
 interface NavLink {
   href: string;
@@ -22,23 +28,68 @@ const SideNav: React.FC = () => {
   ];
 
   return (
-    <div className="absolute top-0 left-0 z-10 border-r-2 border-[#a5a5a555]">
-      {/* Collapsed Menu (Hamburger Icon) */}
-      {!isOpen && (
-        <div className="w-fit md:p-4  md:h-[100vh] bg-transparent md:bg-white">
-          <button
-            onClick={toggleNav}
-            className="p-4 focus:outline-none"
-            aria-label="Open navigation menu"
-            aria-expanded={isOpen}
+    <div className="z-10 absolute md:sticky top-0  border-r-2 border-[#a5a5a555]">
+      <div className="w-fit flex flex-col justify-between items-center md:px-4 md:py-10  md:h-[100vh] bg-transparent md:bg-white">
+        <button
+          onClick={toggleNav}
+          className="p-4 md:hidden focus:outline-none"
+          aria-label="Open navigation menu"
+          aria-expanded={isOpen}
+        >
+          <div className="space-y-2">
+            <div className="w-6 h-0.5 bg-black"></div>
+            <div className="w-6 h-0.5 bg-black"></div>
+          </div>
+        </button>
+        <div className="flex flex-col gap-10 font-[Fredoka] items-center">
+          <Link
+            to="/"
+            aria-label="Navigate to Home"
+            className="hidden md:block relative group"
           >
-            <div className="space-y-2">
-              <div className="w-6 h-0.5 bg-black"></div>
-              <div className="w-6 h-0.5 bg-black"></div>
+            <LuHome size={24} />
+            <div className="absolute -bottom-1 left-[130%] mb-1 hidden group-hover:block bg-gray-800 text-white text-sm rounded px-2 py-1">
+              Home
             </div>
-          </button>
+          </Link>
+
+          <Link
+            to="/work"
+            aria-label="Navigate to Work"
+            className="hidden md:block relative group"
+          >
+            <PiBooks size={24} />
+            <div className="absolute -bottom-1 left-[130%] mb-1 hidden group-hover:block bg-gray-800 text-white text-sm rounded px-2 py-1">
+              Work
+            </div>
+          </Link>
+
+          <Link
+            to="/essays"
+            aria-label="Navigate to Essays"
+            className="hidden md:block relative group"
+          >
+            <MdOutlineLibraryBooks size={24} />
+            <div className="absolute -bottom-1 left-[130%] mb-1 hidden group-hover:block bg-gray-800 text-white text-sm rounded px-2 py-1">
+              Essays
+            </div>
+          </Link>
+
+          <Link
+            to="/contact"
+            aria-label="Navigate to Contacts"
+            className="hidden md:block relative group"
+          >
+            <LuContact size={24} />
+            <div className="absolute -bottom-1 left-[130%] mb-1 hidden group-hover:block bg-gray-800 text-white text-sm rounded px-2 py-1">
+              Contacts
+            </div>
+          </Link>
         </div>
-      )}
+        <Link to="https://www.charlottemandell.com/contact/My%20facebook%20link" aria-label="Navigate to Instagram"
+            className="hidden md:block relative group">
+        <IoLogoFacebook size={24} /></Link>
+      </div>
 
       {/* Expanded Menu with Framer Motion */}
       {isOpen && (

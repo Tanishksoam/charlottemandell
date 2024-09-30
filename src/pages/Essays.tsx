@@ -14,11 +14,11 @@ interface Essay {
 
 const Essays = () => {
   return (
-    <div>
+    <div className="mx-auto w-[80vw] mt-12">
       <Title title="Essays" description="Dive into a collection of my thoughtful essays, where I explore various topics with depth and insight." background={banner} />
-      {/* content */}
+
       <div className="max-w-6xl mx-auto py-6">
-        <div className="grid md:grid-cols-2 gap-4 p-4">
+        <div className="grid md:grid-cols-1 gap-4 p-4">
           {essays.map((essay: Essay) => (
             <EssayPreview key={essay.id} essay={essay} />
           ))}

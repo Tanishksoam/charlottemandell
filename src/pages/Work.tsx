@@ -108,19 +108,16 @@ const awardsAndHonors = {
 
 const Work = () => {
   return (
-    <div>
+    <div className="mx-auto w-[80vw] mt-12 ">
       <Title
         title="Bibliography"
         description="Catalogs of my published works—books, articles, translations and..."
         background={banner}
       />
 
-
-      <div className=" max-w-[1440px] mx-auto bg-white py-8">
-
+      <div className=" mx-auto py-8">
         <TitleSection title="Published Books" />
         <Collection />
-
 
         <TitleSection title="Translations appearing in periodicals and collections" />
         <Translations />
@@ -164,24 +161,40 @@ const Work = () => {
 
         {/* awards & honors */}
         <TitleSection title="Awards & Honors" />
-        <div className="p-6 sm:p-10 max-w-2xl mx-auto">
-          <div className="after:absolute after:inset-y-0 after:w-px after:bg-gray-500/20 relative pl-6 after:left-0 grid gap-10 dark:after:bg-gray-400/20">
+
+        <div className="container mx-auto w-full h-full">
+          <div className="relative wrap overflow-hidden h-full">
+            <div className="border-2 absolute border-opacity-20 border-gray-700 h-full -z-10 left-[50%]"></div>
+
             {awardsAndHonors.items.map((item, index) => (
               <div
-                className="grid gap-1 relative max-w-6xl bg-white p-6 shadow rounded-md"
                 key={index}
+                className={`mb-8 flex md:justify-between items-center w-full ${
+                  index % 2 === 0
+                    ? "right-timeline justify-end"
+                    : "left-timeline justify-start"
+                }`}
               >
-                <div className="aspect-square w-3 bg-gray-900 rounded-full absolute left-0 translate-x-[-29.5px] z-10 top-1 dark:bg-gray-50" />
-                <div className="font-medium">{item.year}</div>
-                <div className="text-xl font-semibold opacity-75">
-                  {item.awardName}
+                <div className="hidden md:block order-1 w-5/12"></div>
+                <div className="z-20 hidden md:flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full" />
+                <div className={`order-1 flex flex-col justify-center rounded-lg shadow-xl md:w-5/12 px-6 py-4 min-h-[250px] bg-white ${
+                  index % 2 === 0
+                    ? " md:items-start md:text-start"
+                    : "md:items-end md:text-end"
+                }`}>
+                  <p className="text-sm font-medium text-gray-700">
+                    {item.year}
+                  </p>
+                  <h3 className="mb-3 font-bold text-gray-800 text-xl">
+                    {item.awardName}
+                  </h3>
+                  <p className="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">
+                    {item.description}
+                  </p>
+                  <p className="text-sm font-medium text-gray-700">
+                    {item.awardedBy}
+                  </p>
                 </div>
-                <div>{item.awardedBy}</div>
-                {item.extra && (
-                  <div className="text-gray-500 dark:text-gray-400">
-                    {item.extra}
-                  </div>
-                )}
               </div>
             ))}
           </div>

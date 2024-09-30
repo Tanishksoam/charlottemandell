@@ -18,7 +18,7 @@ const Template = () => {
     <div style={backgroundStyle}>
       <Router>
         {/* <div className="min-h-screen  font-[pt-sherif]"> */}
-        <div className="h-screen flex flex-row justify-center items-start  font-[pt-sherif] overflow-y-scroll">
+        <div className="h-screen flex flex-row justify-start items-start  font-[pt-sherif] overflow-y-scroll">
           {/* <Navbar /> */}
           <SideNav />
           <Routes>

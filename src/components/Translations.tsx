@@ -49,7 +49,7 @@ const Translations = () => {
                   className="bg-white rounded-md w-80 px-8 py-4 shadow border-[1px] border-[#e5e7eb] dark:border-gray-800"
                   variants={hoverVariants} // Apply hover animation
                 >
-                  <div className="space-y-2 w-full">
+                  <div className="space-y-2 flex flex-col justify-center w-full min-h-[200px] ">
                     <div className=" w-full flex justify-between items-center gap-4 text-xs">
                       <p className=" text-gray-500 dark:text-gray-400">
                         <strong>Author:</strong>

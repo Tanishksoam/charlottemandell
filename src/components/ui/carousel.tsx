@@ -155,11 +155,11 @@ const CarouselContent = React.forwardRef<
   const { carouselRef, orientation } = useCarousel();
 
   return (
-    <div ref={carouselRef} className=" overflow-x-hidden overflow-y-visible">
+    <div ref={carouselRef} className=" overflow-x-hidden  overflow-y-visible">
       <div
         ref={ref}
         className={cn(
-          "flex items-center justify-start overflow-visible",
+          "flex items-center justify-start overflow-visible ",
           orientation === "horizontal" ? "-ml-4" : "-mt-4 flex-col",
           className
         )}
@@ -231,7 +231,7 @@ const CarouselNext = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
-        "h-12 w-12",
+        "h-12 w-12 rounded-full border-none hover:bg-gray-400",
         orientation === "horizontal" ? "" : "",
         className
       )}
