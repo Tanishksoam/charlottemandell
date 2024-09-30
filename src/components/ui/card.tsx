@@ -33,7 +33,7 @@ export function Cards({ book }: CardsProps) {
             <DrawerTrigger asChild>
               <img
                 alt={`Book Cover of ${book.title}`}
-                className=" aspect-[3/4] w-full max-w-[300px] overflow-hidden rounded-lg object-cover shadow-lg"
+                className="aspect-[3/4] w-full max-w-[300px] overflow-hidden rounded-lg object-cover shadow-lg"
                 src="/placeholder.svg"
               />
               {/* <div
@@ -73,7 +73,7 @@ export function Cards({ book }: CardsProps) {
                         href={`${book?.link}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex my-6 items-center gap-2 text-sm font-medium text-neutral-900 hover:underline dark:text-neutral-50"
+                        className="inline-flex my-6  items-center gap-2 text-sm font-medium text-neutral-900 hover:underline dark:text-neutral-50"
                       >
                         <Button variant="outline">View on Amazon</Button>
                       </a>

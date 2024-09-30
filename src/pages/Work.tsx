@@ -3,6 +3,9 @@ import banner from "../assets/sections/bird.avif";
 import TitleSection from "@/components/typography/TitleSection";
 import Collection from "@/components/Collection";
 import Translations from "@/components/Translations";
+import {motion} from "framer-motion"
+import { useInView } from "react-intersection-observer"; 
+
 
 const criticalWritings = {
   writings: [
@@ -106,16 +109,17 @@ const awardsAndHonors = {
   ],
 };
 
+
 const Work = () => {
   return (
-    <div className="mx-auto w-[80vw] mt-12 ">
+    <div className="mx-auto w-[80vw] mt-12">
       <Title
         title="Bibliography"
         description="Catalogs of my published works—books, articles, translations and..."
         background={banner}
       />
 
-      <div className=" mx-auto py-8">
+      <div className="mx-auto py-8">
         <TitleSection title="Published Books" />
         <Collection />
 
@@ -159,43 +163,15 @@ const Work = () => {
           ))}
         </div>
 
-        {/* awards & honors */}
+        {/* Awards & Honors Section */}
         <TitleSection title="Awards & Honors" />
 
         <div className="container mx-auto w-full h-full">
           <div className="relative wrap overflow-hidden h-full">
-            <div className="border-2 absolute border-opacity-20 border-gray-700 h-full -z-10 left-[50%]"></div>
+            <div className="border-2 absolute border-opacity-20 border-gray-700 h-full -z-10 left-[50%]" />
 
             {awardsAndHonors.items.map((item, index) => (
-              <div
-                key={index}
-                className={`mb-8 flex md:justify-between items-center w-full ${
-                  index % 2 === 0
-                    ? "right-timeline justify-end"
-                    : "left-timeline justify-start"
-                }`}
-              >
-                <div className="hidden md:block order-1 w-5/12"></div>
-                <div className="z-20 hidden md:flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full" />
-                <div className={`order-1 flex flex-col justify-center rounded-lg shadow-xl md:w-5/12 px-6 py-4 min-h-[250px] bg-white ${
-                  index % 2 === 0
-                    ? " md:items-start md:text-start"
-                    : "md:items-end md:text-end"
-                }`}>
-                  <p className="text-sm font-medium text-gray-700">
-                    {item.year}
-                  </p>
-                  <h3 className="mb-3 font-bold text-gray-800 text-xl">
-                    {item.awardName}
-                  </h3>
-                  <p className="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">
-                    {item.description}
-                  </p>
-                  <p className="text-sm font-medium text-gray-700">
-                    {item.awardedBy}
-                  </p>
-                </div>
-              </div>
+              <AwardItem key={index} item={item} index={index} />
             ))}
           </div>
         </div>
@@ -203,5 +179,54 @@ const Work = () => {
     </div>
   );
 };
+
+interface AwardItemProps {
+  item: {
+    year: string;
+    awardName: string;
+    awardedBy: string;
+    description: string;
+    extra?: string;
+  };
+  index: number;
+}
+
+const AwardItem = ({ item, index }: AwardItemProps) => {
+  const [ref, inView] = useInView({
+    threshold: 0.2,
+  });
+
+  return (
+    <motion.div
+      ref={ref} // Attach ref to each individual award item
+      initial={{ opacity: 0, y: 50 }}
+      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+      transition={{ duration: 1 }}
+      className={`mb-8 flex md:justify-between items-center w-full ${
+        index % 2 === 0
+          ? "right-timeline justify-end"
+          : "left-timeline justify-start"
+      }`}
+    >
+      <div className="hidden md:block order-1 w-5/12"></div>
+      <div className="z-20 hidden md:flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full" />
+      <div
+        className={`order-1 flex flex-col justify-center rounded-lg shadow-xl md:w-5/12 px-6 py-4 min-h-[250px] bg-white ${
+          index % 2 === 0 ? "md:items-start md:text-start" : "md:items-end md:text-end"
+        }`}
+      >
+        <p className="text-sm font-medium text-gray-700">{item.year}</p>
+        <h3 className="mb-3 font-bold text-gray-800 text-xl">{item.awardName}</h3>
+        <p className="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">
+          {item.description}
+        </p>
+        <p className="text-sm font-medium text-gray-700">{item.awardedBy}</p>
+      </div>
+    </motion.div>
+  );
+};
+
+
+
 
 export default Work;
